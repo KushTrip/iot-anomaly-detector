@@ -1,1 +1,91 @@
-# iot-anomaly-detector
+# IoT Anomaly Detection (Stream Processing)
+
+This project demonstrates a lightweight real-time anomaly detection system using simulated IoT sensor data. It was built for the IU module **DLBDSMTP01 – Project: From Model to Production**.
+
+The system simulates live sensor readings from a smart factory, detects anomalies using a trained machine learning model (Isolation Forest), and serves predictions through a REST API built with Flask.
+
+## 📁 Project Structure
+
+```
+iot-anomaly-detector/
+│
+├── app/
+│   ├── api.py                # Flask API to serve the model
+│   ├── stream_simulator.py   # Simulates real-time sensor data stream
+│   └── test_api.py           # Sends a test POST request to API
+│
+├── data/
+│   └── sensor_data.csv       # Simulated sensor data (normal + anomalies)
+│
+├── model/
+│   └── model.pkl             # Trained Isolation Forest model
+│
+├── generate_data.py          # Script to simulate and save sensor data
+├── train_model.py            # Trains Isolation Forest and saves model
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project overview
+```
+
+## 🚀 How to Run
+
+Follow these steps to set up and run the project:
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/your-username/iot-anomaly-detector.git
+   cd iot-anomaly-detector
+   ```
+
+2. **Install dependencies**  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Generate the data**  
+   ```bash
+   python generate_data.py
+   ```
+
+4. **Train the model**  
+   ```bash
+   python train_model.py
+   ```
+
+5. **Start the API**  
+   ```bash
+   python app/api.py
+   ```
+
+6. **Start the data stream simulator**  
+   In a separate terminal:
+   ```bash
+   python app/stream_simulator.py
+   ```
+
+## 🧠 Model Info
+
+- **Algorithm**: Isolation Forest (unsupervised anomaly detection)
+- **Output**:  
+  - `anomaly_score`: `0` (normal), `1` (anomaly) — simplified for readability  
+  - `status`: "normal" or "anomaly"
+
+> Although Isolation Forest internally returns -1 for anomalies and 1 for normal points, the API output is adjusted for clarity.
+
+## 📊 Features Used
+
+- `temperature`
+- `humidity`
+- `sound_volume`
+
+## 📝 Notes
+
+- Simulates 1050 total readings (1000 normal + 50 anomalies)
+- Approximately 5% anomalies detected (53 out of 1050)
+- Fully modular and reproducible codebase
+- Beginner-friendly, but can be extended for Docker, CI/CD, or cloud deployment
+
+---
+
+**Project by Kush Tripathi**  
+IU International University  
+Module: DLBDSMTP01
