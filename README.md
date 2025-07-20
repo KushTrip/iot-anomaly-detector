@@ -69,7 +69,7 @@ It is extremely crucial to install the requirements for the system to work.
    ```
   
    ```bash
-   python app/api.py
+   python api.py
    ```
    You'll see the following output
 ```   
@@ -90,7 +90,7 @@ Press CTRL+C to quit
  
    Run the following code in a separate terminal:
    ```bash
-   python app/stream_simulator.py
+   python stream_simulator.py
    ```
    You'll see the following output
 ```   
