@@ -41,26 +41,64 @@ Follow these steps to set up and run the project:
    pip install -r requirements.txt
    ```
 
-3. **Generate the data**  
+3. **Run the following code in CMD to Generate the sensor data**  
    ```bash
    python generate_data.py
    ```
 
-4. **Train the model**  
+4. **Run the following code in CMD to Train the anomaly detection model**  
    ```bash
    python train_model.py
    ```
 
-5. **Start the API**  
+5. **Run the following code in CMD to Start the REST API**  
    ```bash
    python app/api.py
    ```
-
-6. **Start the data stream simulator**  
-   In a separate terminal:
+   You'll see the following output
+```   
+    * Serving Flask app 'api'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 897-100-635
+```
+7. **Start the data stream simulator**  
+   Run the following code in a separate terminal:
    ```bash
    python app/stream_simulator.py
    ```
+   You'll see the following output
+```   
+   🚀 Starting data stream simulation...
+
+Reading 1: {
+  'temperature': 52.48357076505616,
+  'humidity': 63.99355436586002,
+  'sound': 64.59857380020495
+}
+➡️ {'anomaly_score': 0, 'status': 'normal'}
+
+Reading 2: {
+  'temperature': 49.30867849414408,
+  'humidity': 59.246336829127685,
+  'sound': 68.84385063427585
+}
+➡️ {'anomaly_score': 0, 'status': 'normal'}
+
+Reading 3: {
+  'temperature': 53.23844269050346,
+  'humidity': 50.59630369920174,
+  'sound': 63.66064063200031
+}
+➡️ {'anomaly_score': 0, 'status': 'normal'}
+
+```
+and then reading 4, reading 5 and so on it goes. 
+   
 
 ## 🧠 Model Info
 
