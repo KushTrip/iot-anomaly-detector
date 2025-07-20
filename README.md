@@ -32,26 +32,42 @@ Follow these steps to set up and run the project:
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/your-username/iot-anomaly-detector.git
-   cd iot-anomaly-detector
+   git clone https://github.com/KushTrip/iot-anomaly-detector.git
+   cd (copy the directory where this project will be saved)
    ```
 
 2. **Install dependencies**  
+It is extremely crucial to install the requirements for the system to work.
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run the following code in CMD to Generate the sensor data**  
+3. **Run the following code in CMD to Generate the sensor data**
+
+   ```bash
+   cd (For Example: C:\Users\Username\Downloads\iot-anomaly-detector.git)
+   ```
+  
    ```bash
    python generate_data.py
    ```
 
 4. **Run the following code in CMD to Train the anomaly detection model**  
+
+   ```bash
+   cd (For Example: C:\Users\Username\Downloads\iot-anomaly-detector.git)
+   ```
+
    ```bash
    python train_model.py
    ```
 
-5. **Run the following code in CMD to Start the REST API**  
+5. **Run the following code in CMD to Start the REST API**
+
+   ```bash
+   cd (For Example: C:\Users\Username\Downloads\iot-anomaly-detector.git\app)
+   ```
+  
    ```bash
    python app/api.py
    ```
@@ -66,7 +82,12 @@ Press CTRL+C to quit
  * Debugger is active!
  * Debugger PIN: 897-100-635
 ```
-7. **Start the data stream simulator**  
+7. **Start the data stream simulator** 
+
+   ```bash
+   cd (For Example: C:\Users\Username\Downloads\iot-anomaly-detector.git\app)
+   ```
+ 
    Run the following code in a separate terminal:
    ```bash
    python app/stream_simulator.py
