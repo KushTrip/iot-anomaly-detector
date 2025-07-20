@@ -73,7 +73,7 @@ It is extremely crucial to install the requirements for the system to work.
    ```
    You'll see the following output
 ```   
-    * Serving Flask app 'api'
+ * Serving Flask app 'api'
  * Debug mode: on
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on http://127.0.0.1:5000
@@ -94,7 +94,7 @@ Press CTRL+C to quit
    ```
    You'll see the following output
 ```   
-   🚀 Starting data stream simulation...
+🚀 Starting data stream simulation...
 
 Reading 1: {
   'temperature': 52.48357076505616,
