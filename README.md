@@ -11,8 +11,7 @@ iot-anomaly-detector/
 │
 ├── app/
 │   ├── api.py                # Flask API to serve the model
-│   ├── stream_simulator.py   # Simulates real-time sensor data stream
-│   └── test_api.py           # Sends a test POST request to API
+│   └── stream_simulator.py   # Simulates real-time sensor data stream
 │
 ├── data/
 │   └── sensor_data.csv       # Simulated sensor data (normal + anomalies)
