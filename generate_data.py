@@ -1,4 +1,4 @@
-# train_model.py (part 1 - create fake data)
+# (part 1 :create sensor data which mimics realistic factory data)
 import pandas as pd
 import numpy as np
 
@@ -25,4 +25,4 @@ normal = pd.DataFrame({
 
 data = pd.concat([normal, anomalies], ignore_index=True)
 data.to_csv('data/sensor_data.csv', index=False)
-print("Fake sensor data saved.")
+print("Simulated sensor data saved to data/sensor_data.csv!")
